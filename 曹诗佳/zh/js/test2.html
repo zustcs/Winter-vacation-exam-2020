@@ -1,0 +1,30 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <script language="javascript">
+    function dowith() {
+
+      var img = document.getElementById("img");
+      if (img.src == "../img/look2.png") {
+        img.src = "../img/look1.png";
+        alert(img.src);
+      }
+      else {
+        img.src = "../img/look2.png";
+        alert(img.src);
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form name="form" action="" method="post">
+    <button type="button" style="background: none; border: 0;" onclick="dowith();">
+      <img id="img" src="../img/look1.png" width="100">
+    </button>
+  </form>
+</body>
+
+</html>

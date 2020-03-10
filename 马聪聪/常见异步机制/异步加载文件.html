@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function load(src, callback) {
+      let script = document.createElement("script");
+      script.src = src;
+      script.onload = callback; // 指定了回调函数的执行条件,就是在文件读取完毕之后
+      document.body.appendChild(script);
+    }
+
+    load("f1.js", () => {
+      f1();
+      // load("f2.js", () => {
+      //   f2();
+      // })
+    });
+
+    load("f2.js", () => {
+      f2();
+    })
+  </script>
+</body>
+
+</html>
